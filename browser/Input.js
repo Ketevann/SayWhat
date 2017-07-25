@@ -22,19 +22,12 @@ class Input extends React.Component {
             content: event.target.text.value
         }
         this.props.fetchText(text)
-
     }
     clickHandler() {
-
-        console.log("TSTS")
         store.dispatch(this.props.buttonClick())
-        console.log("!")
     }
 
-    render() {
-        {
-            console.log(this.props, "props")
-        }
+    render() {               
         return (
             <div className="container">
                 <img src={"http://i.imgur.com/9ySNjab.png"} />
