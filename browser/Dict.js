@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 
 
 
-// this came with the component
 const propTypes = {
     // Props injected by SpeechRecognition
     transcript: PropTypes.string,
@@ -33,7 +32,6 @@ class Dictaphone extends Component {
         if (!browserSupportsSpeechRecognition) {
             return null
         }
-
         return (
             <div className="container">
                 {transcript}  {/* this transcript is the transcrapied speech rendered on the page. Below is a Stop button. When clicked it classs the clickHandler which sends the text to fetchTExt and then to google and then we get the scores*/}
