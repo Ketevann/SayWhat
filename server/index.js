@@ -19,10 +19,10 @@ app.use('/', bodyParser.json());
 app.use('/', bodyParser.urlencoded({ extended: true }));
 
 //serves up static files
-app.use(express.static('/Users/ketevantsintsadze/Documents/coding/foundations/speech/SayWhat/public'));
+app.use(express.static(path.join(__dirname, '../public')))
 
 app.get('*', function (req, res) {
-    res.sendFile('/Users/ketevantsintsadze/Documents/coding/foundations/speech/SayWhat/public')
+    res.sendFile(path.join(__dirname, '../public'))
 })
 
 //-----------------------------natural language api POST----------------------------------------
