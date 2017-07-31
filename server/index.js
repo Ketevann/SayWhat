@@ -40,11 +40,11 @@ app.post('/api/text', (req, res, next) => {
                     const sentiment = results[0]
                     res.send({ sentiment: sentiment, entities: entities })
                 })
-        })
+            })
         .catch((err) => {
             console.error('ERROR:', err);
-        });
-})
+       });
+   })
 
 
 //----------------------------------------------------------------------------------------------------
